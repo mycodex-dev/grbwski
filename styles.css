@@ -25,13 +25,12 @@ body {
   justify-content: center;
   text-align: center;
   transition: opacity 0.4s ease;
-  background-color: red;
 }
 
 .hero-bg {
   position: absolute;
   inset: -15%;
-  background-image: url("/images/hero.webp");
+  background-image: url("images/hero.webp");
   background-size: cover;
   background-position: center;
   transform: translateY(0);
