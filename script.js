@@ -6,23 +6,23 @@ const fadeSections = document.querySelectorAll('.fade-section');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-    heroBg.style.transform = `translateY(${scrollY * 0.25}px)`;
+  heroBg.style.transform = `translateY(${scrollY * 0.25}px)`;
 
-      hero.style.opacity = 1 - scrollY / 600;
-      });
+  hero.style.opacity = 1 - scrollY / 600;
+});
 
-      /* Fade-In Sections */
-      const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                          entry.target.classList.add('visible');
-                                }
-                                    });
-                                      },
-                                        { threshold: 0.15 }
-                                        );
+/* Fade-In Sections */
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
 
-                                        fadeSections.forEach(section => {
-                                          observer.observe(section);
-                                          });
+fadeSections.forEach(section => {
+  observer.observe(section);
+});
