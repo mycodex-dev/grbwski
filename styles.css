@@ -58,6 +58,19 @@ body {
   position: relative;
   z-index: 4;
   padding: 0 1.5rem;
+  animation: fadeUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero h1 {
