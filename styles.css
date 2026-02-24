@@ -112,26 +112,27 @@ body {
   animation: bounce 2s infinite;
 }
 
-/* Content Section */
+/* ===== Content ===== */
 
 .content {
-  padding: 100px 20px;
-}
-
-.container {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-.content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+section {
+  margin-bottom: 4rem;
 }
 
-.content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
+h2 {
+  font-size: 1.4rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
 }
 
 /* Animations */
