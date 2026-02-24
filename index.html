@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GRBW.SKI</title>
+  <title>grbw.ski lab</title>
   <link rel="preload" as="image" href="images/hero.webp">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<header class="site-header">
+  <div class="site-branding">
+    <a href="/">grbw.ski lab</a>
+  </div>
+</header>
 
 <section class="hero">
   <div class="hero-bg"></div>
@@ -18,14 +23,16 @@
   <div class="hero-grain"></div>
 
   <div class="hero-content">
-    <h1>GRBW.SKI</h1>
-    <p class="subtitle">
-      A small corner of the internet for homelab experiments,
-      self-hosted services, and technical curiosity.
-    </p>
-    <p class="tagline">
-      If it’s running here, it probably broke first.
-    </p>
+    <h1>
+      Building things. Breaking things. Learning constantly.
+    </h1>
+
+    <div class="hero-links">
+      <a href="https://github.com/mycodex-dev" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/migrabowski/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
 
     <div class="scroll-indicator">
       <span></span>
@@ -75,7 +82,7 @@ Docker | Ubuntu | Tailscale | Nginx | Too many YAML files
 </main>
 
 <footer>
-  © 2026 GRBW.SKI · Built for curiosity.
+  © 2026 grbw.ski · Built for curiosity.
 </footer>
 
 <script src="script.js"></script>
