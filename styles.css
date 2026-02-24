@@ -134,6 +134,18 @@ ul {
   line-height: 1.8;
 }
 
+.stack-code-box {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: "JetBrains Mono", "Fira Code", "SFMono-Regular", Menlo, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
 /* Fade-in Effect */
 
 .fade-section {
