@@ -1,77 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>grbw.ski lab</title>
-  <link rel="preload" as="image" href="images/hero.webp">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GRBWSKI.SKI LABS // SYSTEM_v2.04</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "var(--primary)",
+              "on-primary": "var(--on-primary)",
+              "background": "var(--background)",
+              "on-background": "var(--on-background)",
+              "surface": "var(--surface)",
+              "on-surface": "var(--on-surface)",
+              "outline": "var(--outline)",
+              "secondary-container": "var(--secondary-container)",
+              "on-secondary-container": "var(--on-secondary-container)"
+            },
+            fontFamily: {
+              "headline": ["var(--font-headline)", "sans-serif"],
+              "body": ["var(--font-body)", "sans-serif"],
+              "label": ["var(--font-headline)", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "var(--radius)",
+              "lg": "var(--radius-lg)",
+              "xl": "var(--radius-xl)",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --primary: #5F5E5A;
+            --on-primary: #ffffff;
+            --background: #f9f9f9;
+            --on-background: #2f3334;
+            --surface: #ffffff;
+            --on-surface: #2f3334;
+            --outline: #d1d1cf;
+            --secondary-container: #f1f2eb;
+            --on-secondary-container: #5F5E5A;
+            --font-headline: 'Manrope';
+            --font-body: 'Inter';
+            --radius: 0px;
+            --radius-lg: 12px;
+            --radius-xl: 24px;
+            --hero-overlay: linear-gradient(to bottom, rgba(249,249,249,0.2) 0%, rgba(249,249,249,1) 95%);
+        }
+
+        .dark {
+            --primary: #00FF41;
+            --on-primary: #000000;
+            --background: #0a0a0a;
+            --on-background: #ffffff;
+            --surface: #121212;
+            --on-surface: #ffffff;
+            --outline: #333333;
+            --secondary-container: #1a1a1a;
+            --on-secondary-container: #00FF41;
+            --font-headline: 'Space Grotesk';
+            --font-body: 'Space Grotesk';
+            --radius: 0px;
+            --radius-lg: 0px;
+            --radius-xl: 0px;
+            --hero-overlay: linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 95%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--outline); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+        
+        .hero-gradient {
+            background: var(--hero-overlay);
+        }
+        html { scroll-behavior: smooth; }
+        
+        .transition-theme {
+            transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, font-family 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-
-<header class="site-header">
-  <div class="site-branding">
-    <a href="/">grbw.ski lab</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>
-      Building things. Breaking things. Learning constantly.
-    </h1>
-
-    <div class="hero-links">
-      <a href="https://github.com/mycodex-dev" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/migrabowski/" target="_blank">LinkedIn</a>
-    </div>
-  </div>
-
-
-    <div class="scroll-indicator">
-      <span></span>
-    </div>
-  </div>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary transition-theme">
+<!-- TopAppBar Component -->
+<nav class="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-3xl border-b border-outline/30 transition-theme">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 md:px-12 py-6">
+<div class="text-2xl font-black text-on-background tracking-tighter font-headline flex-1">
+            GRBW.SKI LABS
+        </div>
+<div class="hidden md:flex space-x-10 items-center justify-center flex-1">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-headline tracking-tight" href="#labs">INSIDE THE LAB</a>
+<a class="text-on-background font-medium hover:text-primary transition-all duration-300 font-headline tracking-tight" href="#obsessions">OBSESSIONS</a>
+<a class="text-on-background font-medium hover:text-primary transition-all duration-300 font-headline tracking-tight" href="#stack">STACK</a>
+</div>
+<div class="flex items-center justify-end flex-1">
+<button class="p-2 rounded-full hover:bg-secondary-container transition-colors group" id="theme-toggle">
+<span class="material-symbols-outlined text-2xl text-on-background group-hover:text-primary" id="theme-toggle-icon">light_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 flex items-center justify-center">
+<img alt="Technical abstract architectural visualization" class="w-full h-full object-cover opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida/ADBb0ujVQ431rNCJSu3dTlqQAgmILqs66N1PvZHFMuSqYZoAi3FNwRAFd9w2wBzq1eqhqWp-Mj8ezdJKRneW97_9WET3OyUBKaPXUS0dIrqf5Y0euq0EwEArLka6OeePfPpeaiUE9Y3sM6oRdh2OvSO2vV8H_ev_c3F9W1C2_jXTexD9i5Fuog1EnhXDXIOR_eCyZMZ7-Z1jj3XNuXy8bTCKY5WFycdp5Oe2JktnR6XAMzjjVn5UduBOj_23DclsxrUIUd8L7eH9_wAqby4"/>
+<div class="absolute inset-0 hero-gradient transition-theme"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="inline-block font-label text-[10px] tracking-[0.4em] text-primary uppercase mb-6 bg-secondary-container px-3 py-1 rounded-full transition-theme">v2.04_STABLE</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-[-0.05em] leading-[0.95] mb-10 text-on-background transition-theme">
+                Building things.<br/>
+                Breaking things.<br/>
+                Learning constantly.
+            </h1>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-16">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold tracking-tight transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 w-full md:w-auto" href="https://github.com/mycodex-dev/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">code</span>
+                    GITHUB_REPO
+                </a>
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold tracking-tight transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 w-full md:w-auto" href="https://www.linkedin.com/in/migrabowski/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">link</span>
+                    CONNECT_LI
+                </a>
+</div>
+</div>
 </section>
-
-<main class="content">
-
-  <section class="fade-section">
-    <h2>What Happens Here</h2>
-    <ul>
-      <li>Self-hosting experiments</li>
-      <li>Linux + containers + automation</li>
-      <li>Local AI tinkering</li>
-      <li>Network hardening</li>
-      <li>Random ideas that seemed good at 10pm</li>
-    </ul>
-  </section>
-
-  <section class="fade-section">
-    <h2>Current Obsessions</h2>
-    <ul>
-      <li>Running a local LLM stack</li>
-      <li>Searchable markdown knowledge base</li>
-      <li>Containerizing everything (probably unnecessarily)</li>
-      <li>Monitoring the homelab like it’s a Fortune 500 data center</li>
-    </ul>
-  </section>
-
-  <section class="fade-section">
-    <h2>Stack</h2>
-    <pre class="stack-code-box"><code>Docker | Ubuntu | Tailscale | Nginx | Too many YAML files</code></pre>
-  </section>
-
+<!-- Section 1: What Happens Here -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="labs">
+<div class="flex flex-col md:flex-row gap-4 mb-20 items-end justify-between">
+<div class="max-w-xl">
+<span class="text-primary font-label text-xs tracking-[0.3em] font-bold mb-4 block">01 // OPERATIONS</span>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight text-on-background transition-theme">What Happens<br/><span class="text-primary/40">Inside The Lab</span></h2>
+</div>
+<div class="text-on-background/40 font-label text-[10px] tracking-[0.2em] hidden md:block border-l border-outline pl-4 py-1">
+                [ LOG_FILE: 0x8F2A ]
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface border border-outline/50 p-12 rounded-xl flex flex-col justify-between aspect-square group hover:border-primary transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl">dns</span>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3">Self-hosting experiments</h3>
+<p class="text-on-background/60 text-sm leading-relaxed">Running a suite of private services to regain digital sovereignty and control data footprint.</p>
+</div>
+</div>
+<div class="bg-secondary-container/50 border border-outline/30 p-12 rounded-xl flex flex-col justify-between aspect-square group hover:bg-secondary-container transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl">terminal</span>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3">Linux + Containers</h3>
+<p class="text-on-background/60 text-sm leading-relaxed">Infrastructure as code. Automation over manual intervention. Every single deployment counts.</p>
+</div>
+</div>
+<div class="bg-surface border border-outline/50 p-12 rounded-xl flex flex-col justify-between aspect-square group hover:border-primary transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl">psychology</span>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3">Local AI Tinkering</h3>
+<p class="text-on-background/60 text-sm leading-relaxed">Quantized models, vector databases, and private intelligence pipelines run locally.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface border border-outline/50 p-12 rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between group hover:shadow-lg transition-all duration-500">
+<div class="max-w-md">
+<h3 class="font-headline text-3xl font-bold mb-3">Network Hardening</h3>
+<p class="text-on-background/60 text-base">Zero-trust architecture, encrypted tunnels, and localized security monitoring to protect the edge of our distributed environment.</p>
+</div>
+<span class="material-symbols-outlined text-primary/10 text-7xl group-hover:text-primary transition-all duration-700 mt-6 md:mt-0">shield</span>
+</div>
+<div class="bg-primary p-12 rounded-xl flex flex-col justify-center items-center text-center text-on-primary">
+<h3 class="font-headline text-xl font-bold mb-4 tracking-tight">Random Ideas</h3>
+<p class="text-on-primary/80 text-sm italic font-body">"Seemed good at 10pm."</p>
+<div class="w-10 h-1 bg-on-primary/20 mt-6 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Current Obsessions -->
+<section class="bg-secondary-container/30 py-32 border-y border-outline/20 transition-theme" id="obsessions">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5">
+<span class="text-primary font-label text-xs tracking-[0.3em] font-bold mb-6 block">02 // FOCUS</span>
+<h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] mb-10 text-on-background transition-theme">Current<br/>Obsessions</h2>
+<p class="text-on-background/70 font-body text-lg leading-relaxed max-w-sm">A real-time snapshot of the technical rabbit holes I'm currently exploring within the homelab environment.</p>
+<div class="mt-16 space-y-2">
+<div class="flex items-center gap-6 py-5 border-b border-outline/40 hover:bg-surface transition-all px-6 rounded-lg cursor-default group">
+<span class="text-primary font-bold text-sm">01</span>
+<span class="font-headline font-bold text-on-background group-hover:translate-x-3 transition-transform">Running local LLM stacks</span>
+</div>
+<div class="flex items-center gap-6 py-5 border-b border-outline/40 hover:bg-surface transition-all px-6 rounded-lg cursor-default group">
+<span class="text-primary font-bold text-sm">02</span>
+<span class="font-headline font-bold text-on-background group-hover:translate-x-3 transition-transform">Searchable markdown KB</span>
+</div>
+<div class="flex items-center gap-6 py-5 border-b border-outline/40 hover:bg-surface transition-all px-6 rounded-lg cursor-default group">
+<span class="text-primary font-bold text-sm">03</span>
+<span class="font-headline font-bold text-on-background group-hover:translate-x-3 transition-transform">Containerizing everything</span>
+</div>
+<div class="flex items-center gap-6 py-5 border-b border-outline/40 hover:bg-surface transition-all px-6 rounded-lg cursor-default group">
+<span class="text-primary font-bold text-sm">04</span>
+<span class="font-headline font-bold text-on-background group-hover:translate-x-3 transition-transform">Enterprise Monitoring</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 relative h-[700px] group">
+<div class="absolute inset-0 bg-primary/5 rounded-3xl overflow-hidden transition-theme">
+<img alt="Server rack with glowing lights" class="w-full h-full object-cover grayscale opacity-60 mix-blend-multiply transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_gmBzUta-24_Cf62I-NUUu2Jw4xZPWYtVcnpqLK3UHVCU8S8WjEDXP4aiXsrzZ4JmB3vhN_nTkrdXq3yjl9pXD-s8Kw4Zu7yBNHHL4j2laWMRe-N7u-oGWdGu8vFY8Dq7qCSZrf6HDr3jUwZbnx68hm5MG5MRfH8DErZxFF7NtVhnRwU_ojXSuV-vJxMtwlLpEAqdanoPXk39pBxgk5A818r25d7c61-2QSLz-JzNfd5pLh4uToO9CaoPhWklGA8yIJuSSqOwaTh"/>
+</div>
+<div class="absolute bottom-12 left-12 right-12 bg-surface/90 backdrop-blur-2xl p-10 rounded-2xl shadow-2xl border border-outline/20 transition-theme">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<h4 class="font-headline font-bold text-on-background text-xl">Observation Node</h4>
+</div>
+<p class="text-on-background/60 text-sm leading-relaxed">Monitoring the homelab like it’s a Fortune 500 data center. Grafana + Prometheus stack active and streaming real-time metrics.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Stack -->
+<section class="py-40 px-8" id="stack">
+<div class="max-w-7xl mx-auto text-center">
+<span class="text-on-background/30 font-label text-[10px] tracking-[0.6em] mb-16 block uppercase font-bold">ENVIRONMENT_CONFIGURATION</span>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-16 items-center">
+<div class="flex flex-col items-center group cursor-pointer">
+<span class="font-headline text-5xl md:text-8xl font-black text-on-background/5 group-hover:text-primary transition-all duration-500">DOCKER</span>
+<span class="font-label text-primary/60 text-[10px] tracking-[0.3em] mt-4 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase">V_ENGINE_24.0</span>
+</div>
+<div class="w-1 h-1 bg-outline rounded-full hidden md:block opacity-40"></div>
+<div class="flex flex-col items-center group cursor-pointer">
+<span class="font-headline text-5xl md:text-8xl font-black text-on-background/5 group-hover:text-primary transition-all duration-500">UBUNTU</span>
+<span class="font-label text-primary/60 text-[10px] tracking-[0.3em] mt-4 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase">LTS_STABLE</span>
+</div>
+<div class="w-1 h-1 bg-outline rounded-full hidden md:block opacity-40"></div>
+<div class="flex flex-col items-center group cursor-pointer">
+<span class="font-headline text-5xl md:text-8xl font-black text-on-background/5 group-hover:text-primary transition-all duration-500">TAILSCALE</span>
+<span class="font-label text-primary/60 text-[10px] tracking-[0.3em] mt-4 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase">SECURE_MESH</span>
+</div>
+<div class="w-1 h-1 bg-outline rounded-full hidden md:block opacity-40"></div>
+<div class="flex flex-col items-center group cursor-pointer">
+<span class="font-headline text-5xl md:text-8xl font-black text-on-background/5 group-hover:text-primary transition-all duration-500">NGINX</span>
+<span class="font-label text-primary/60 text-[10px] tracking-[0.3em] mt-4 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase">REVERSE_PROXY</span>
+</div>
+</div>
+</div>
+</section>
 </main>
-
-<footer>
-  © 2026 grbw.ski · Built for curiosity.
+<!-- Footer Component -->
+<footer class="bg-background w-full border-t border-outline/20 transition-theme" id="contact">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-12 py-20 gap-10">
+<div class="flex flex-col gap-3">
+<div class="text-lg font-bold text-on-background font-headline">grbw.ski labs</div>
+<div class="text-primary font-body text-sm tracking-wide opacity-80">
+                © 2024 grbw.ski labs. All rights reserved.
+            </div>
+<div class="text-on-background/40 font-body text-[10px] tracking-widest uppercase mt-1">
+                BUILD_HASH: 0xFD91A2 · Built for curiosity.
+            </div>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<div class="flex items-center gap-4 bg-surface/50 px-6 py-3 rounded-full border border-outline/20 backdrop-blur-sm shadow-sm transition-theme">
+<span class="text-on-background font-headline font-bold text-xs tracking-[0.2em] uppercase">Lab Status:</span>
+<div class="flex items-center gap-2">
+<div class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</div>
+<span class="text-on-background font-headline font-bold text-xs tracking-[0.2em] uppercase">Online</span>
+</div>
+</div>
+</div>
+</div>
 </footer>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+    const html = document.documentElement;
 
-<script src="script.js"></script>
-</body>
-</html>
+    themeToggle.addEventListener('click', () => {
+        if (html.classList.contains('light')) {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            themeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            themeIcon.textContent = 'light_mode';
+        }
+    });
+
+    // Handle smooth scrolling for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body></html>
