@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html class="light scroll-smooth" lang="en">
-<head>
+<html class="light scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>GRBWSKI.SKI LABS // SYSTEM_v2.04</title>
-<link href="./output.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -117,7 +116,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0 flex items-center justify-center">
-<img alt="Technical abstract architectural visualization" class="w-full h-full object-cover opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida/ADBb0ujVQ431rNCJSu3dTlqQAgmILqs66N1PvZHFMuSqYZoAi3FNwRAFd9w2wBzq1eqhqWp-Mj8ezdJKRneW97_9WET3OyUBKaPXUS0dIrqf5Y0euq0EwEArLka6OeePfPpeaiUE9Y3sM6oRdh2OvSO2vV8H_ev_c3F9W1C2_jXTexD9i5Fuog1EnhXDXIOR_eCyZMZ7-Z1jj3XNuXy8bTCKY5WFycdp5Oe2JktnR6XAMzjjVn5UduBOj_23DclsxrUIUd8L7eH9_wAqby4"/>
+<img alt="Technical abstract architectural visualization" class="w-full h-full object-cover opacity-20 grayscale" src="./images/abstract.png"/>
 <div class="absolute inset-0 hero-gradient transition-theme"></div>
 </div>
 <div class="relative z-10 text-center px-6 max-w-5xl">
@@ -128,10 +127,10 @@
                 Learning constantly.
             </h1>
 <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-16">
-<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold tracking-tight transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 w-full md:w-auto" href="https://github.com/mycodex-dev/" rel="noopener noreferrer" target="_blank">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold tracking-tight transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center gap-3 w-full md:w-auto">
 <span class="material-symbols-outlined text-xl">code</span>
                     GITHUB_REPO
-                </a>
+                </button>
 <a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold tracking-tight transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 w-full md:w-auto" href="https://www.linkedin.com/in/migrabowski/" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-xl">link</span>
                     CONNECT_LI
@@ -186,12 +185,112 @@
 </div>
 </div>
 </section>
+<!-- Section 1.5: Featured Builds (Requested Move) -->
+<section class="py-32 px-8 bg-surface border-y border-outline/10 transition-theme" id="featured-builds">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-primary font-label text-xs tracking-[0.3em] font-bold mb-4 block uppercase">02 // ARTIFACTS</span>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight text-on-background">Featured Builds</h2>
+<p class="text-on-background/60 mt-4 text-lg">Real systems running in my homelab</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Container Platform -->
+<div class="bg-background border border-outline/30 p-10 rounded-[40px] flex flex-col items-start hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-default h-full">
+<div class="w-14 h-14 rounded-full bg-[#E9EBE2] dark:bg-primary/20 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-2xl text-on-background/80 group-hover:text-primary transition-colors">package_2</span>
+</div>
+<h4 class="font-headline font-bold text-2xl mb-4 text-on-background">Container Platform</h4>
+<p class="text-on-background/60 text-base mb-8 leading-relaxed">25+ self-hosted services deployed via modular Docker architecture</p>
+<ul class="space-y-3 mt-auto">
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Standardized compose structure
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Rapid deployments
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Centralized config
+</li>
+</ul>
+</div>
+<!-- Backup + Monitoring -->
+<div class="bg-background border border-outline/30 p-10 rounded-[40px] flex flex-col items-start hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-default h-full">
+<div class="w-14 h-14 rounded-full bg-[#E9EBE2] dark:bg-primary/20 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-2xl text-on-background/80 group-hover:text-primary transition-colors">monitoring</span>
+</div>
+<h4 class="font-headline font-bold text-2xl mb-4 text-on-background">Backup + Monitoring</h4>
+<p class="text-on-background/60 text-base mb-8 leading-relaxed">Automated encrypted backups with real-time observability</p>
+<ul class="space-y-3 mt-auto">
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Incremental backups
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Monitoring + alerts
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Offsite encryption
+</li>
+</ul>
+</div>
+<!-- Knowledge Base -->
+<div class="bg-background border border-outline/30 p-10 rounded-[40px] flex flex-col items-start hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-default h-full">
+<div class="w-14 h-14 rounded-full bg-[#E9EBE2] dark:bg-primary/20 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-2xl text-on-background/80 group-hover:text-primary transition-colors">menu_book</span>
+</div>
+<h4 class="font-headline font-bold text-2xl mb-4 text-on-background">Knowledge Base</h4>
+<p class="text-on-background/60 text-base mb-8 leading-relaxed">Searchable markdown system for technical documentation</p>
+<ul class="space-y-3 mt-auto">
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Structured notes
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Fast search
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+System-of-record
+</li>
+</ul>
+</div>
+<!-- Secure Access Layer -->
+<div class="bg-background border border-outline/30 p-10 rounded-[40px] flex flex-col items-start hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-default h-full">
+<div class="w-14 h-14 rounded-full bg-[#E9EBE2] dark:bg-primary/20 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-2xl text-on-background/80 group-hover:text-primary transition-colors">shield</span>
+</div>
+<h4 class="font-headline font-bold text-2xl mb-4 text-on-background">Secure Access Layer</h4>
+<p class="text-on-background/60 text-base mb-8 leading-relaxed">Zero-trust network architecture across all environments</p>
+<ul class="space-y-3 mt-auto">
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+Reverse proxy routing
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+VPN via VPS
+</li>
+<li class="flex items-center gap-3 text-on-background/50 text-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+OIDC authentication
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 <!-- Section 2: Current Obsessions -->
-<section class="bg-secondary-container/30 py-32 border-y border-outline/20 transition-theme" id="obsessions">
+<section class="bg-secondary-container/30 py-32 border-b border-outline/20 transition-theme" id="obsessions">
 <div class="max-w-7xl mx-auto px-8">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
 <div class="md:col-span-5">
-<span class="text-primary font-label text-xs tracking-[0.3em] font-bold mb-6 block">02 // FOCUS</span>
+<span class="text-primary font-label text-xs tracking-[0.3em] font-bold mb-6 block">03 // FOCUS</span>
 <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] mb-10 text-on-background transition-theme">Current<br/>Obsessions</h2>
 <p class="text-on-background/70 font-body text-lg leading-relaxed max-w-sm">A real-time snapshot of the technical rabbit holes I'm currently exploring within the homelab environment.</p>
 <div class="mt-16 space-y-2">
@@ -303,9 +402,12 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 </script>
